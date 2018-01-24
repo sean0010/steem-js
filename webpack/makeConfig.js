@@ -70,14 +70,14 @@ function makeConfig(options) {
   const isDevelopment = options.isDevelopment;
 
   return {
-    devtool: isDevelopment ? 'cheap-eval-source-map' : 'source-map',
+    devtool: 'cheap-module-source-map',//isDevelopment ? 'cheap-eval-source-map' : 'source-map',
     entry: {
       steem: path.join(options.baseDir, 'src/browser.js'),
       'steem-tests': path.join(options.baseDir, 'test/api.test.js'),
     },
     output: {
       path: path.join(options.baseDir, 'dist'),
-      filename: '[name].min.js',
+      filename: '[name].js',
     },
     plugins: makePlugins(options),
     module: {
