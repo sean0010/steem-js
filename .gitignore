@@ -18,4 +18,3 @@ dist/steem-tests.min.js*
 .idea
 .save
 lib
-dist
